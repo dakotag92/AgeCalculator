@@ -1,0 +1,142 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgrey;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+body div {
+  display: flex;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+#arrow {
+  align-self: flex-end;
+  grid-column: 3;
+  grid-row: 2;
+  width: 60px; /* Adjust this value to make the button larger or smaller */
+  height: 60px; /* This should match the width to create a perfect circle */
+  background-color: purple;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+}
+
+#arrow img {
+  width: 50%; /* Adjust as needed to scale the image */
+}
+
+#input-cont {
+  display: grid;
+  grid-template-columns: 16px 5fr 1fr;
+  height: 90%;
+  width: 85%;
+  background-color: aliceblue;
+  border-radius: 10px;
+  border-bottom-right-radius: 150px;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  margin: 1% 5% 0% 0%;
+  padding-bottom: 5%;
+  justify-content: center;
+}
+
+#input-container {
+  margin-left: 0.8em;
+  border-bottom: 1px solid rgb(71, 70, 70);
+  height: 90%;
+  font-weight: 500;
+  font-size: 15px;
+}
+#input-container p:first-child {
+  color: rgb(109, 109, 109);
+}
+#results-container {
+  margin-left: 0.8em;
+  font-family: "Poppins";
+  position: relative;
+  margin-top: 1em;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  grid-row: 3;
+  align-items: center;
+  justify-self: baseline;
+}
+#results-container div p {
+  font-size: 5em;
+}
+
+.attribution {
+  grid-column: 2 / 3;
+  grid-row: 4 / 4;
+  align-items: end;
+  justify-self: center;
+}
+.form-control:focus {
+  transition: none;
+  box-shadow: none;
+  border: 2px solid purple;
+}
+.form-control {
+  height: 3em;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+}
+#results-container p:first-of-type {
+  color: purple;
+}
+.form-control::placeholder {
+  color: darkgray;
+}
+
+@media (max-width: 770px) {
+  #arrow {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    width: 60px; /* Adjust this value to make the button larger or smaller */
+    height: 60px; /* This should match the width to create a perfect circle */
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+  }
+  .form-control {
+    font-size: 15px;
+    width: 4.5em;
+  }
+  #results-container div p {
+    font-size: 3.5em;
+  }
+}
+@media (max-width: 481px) {
+  .form-control {
+    font-size: 15px;
+    width: 4.5em;
+  }
+  #results-container div p {
+    font-size: 2.5em;
+  }
+  #results-container {
+    margin-top: 1em;
+  }
+}
+@media (max-width: 389px) {
+  #results-container div p {
+    font-size: 2em;
+  }
+}
